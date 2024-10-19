@@ -37,9 +37,8 @@
             width: 200px;
             height: 200px;
             position: relative; /* Thay đổi từ absolute sang relative để căn giữa dễ hơn */
-            animation: yidon 5s infinite;
+            animation: yidon 5s infinite; /* Giảm thời gian hoạt ảnh */
             margin-left: auto; /* Tự động tạo margin trái để căn sang phải */
-            transform: translateY(10%); /* Di chuyển bông hoa lên 30px */
         }
         
         .petal {
@@ -131,11 +130,11 @@
         }
         
         @keyframes yidon {
-            50% {
-                transform: translateY(35%);
+            0%, 100% {
+                transform: translateY(0);
             }
-            100% {
-                transform: translateY(40%);
+            50% {
+                transform: translateY(-5px); /* Giảm khoảng cách di chuyển */
             }
         }
         
