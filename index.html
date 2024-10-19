@@ -4,40 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-    <title>Happy Women's Day</title>
+    <title>Happy Vietnamese Women's Day</title>
     <style>
         body {
             background: #fadede;
+            display: flex;
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            height: 100vh; /* Chiều cao 100% viewport */
+            margin: 0; /* Loại bỏ margin mặc định của body */
+            position: relative; /* Cần thiết cho định vị tuyệt đối */
+            color: white; /* Màu chữ mặc định là trắng */
+            font-family: Aharoni, sans-serif; /* Đổi font chữ thành Aharoni */
         }
         
         .container {
             width: 800px;
             height: 400px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            display: flex; /* Sử dụng flexbox để căn giữa nội dung con */
+            align-items: center; /* Căn giữa theo chiều dọc trong container */
         }
         
         h1 {
             font-family: 'Sacramento', cursive;
             color: #FE7696;
             font-size: 64px;
-        }
-        
-        .letter {
-            width: 600px;
-            height: 400px;
-            display: inline-block;
+            text-align: center; /* Căn giữa nội dung h1 */
+            flex: 1; /* Để h1 chiếm không gian có sẵn */
         }
         
         .rose {
             width: 200px;
             height: 200px;
-            position: absolute;
-            right: 0;
-            display: inline-block;
+            position: relative; /* Thay đổi từ absolute sang relative để căn giữa dễ hơn */
             animation: yidon 5s infinite;
+            margin-left: auto; /* Tự động tạo margin trái để căn sang phải */
             transform: translateY(40%);
         }
         
@@ -155,9 +156,17 @@
                 transform: rotate(0deg);
             }
         }
+
+        .footer-text {
+            position: absolute; /* Định vị tuyệt đối */
+            bottom: 20px; /* Cách dưới 20px */
+            right: 20px; /* Cách phải 20px */
+            font-size: 12px; /* Kích thước chữ nhỏ */
+            font-weight: bold; /* Tô đậm chữ */
+        }
     </style>
 </head>
-<body>
+<body onclick="location.reload();">
     <div class="container">
         <div class="letter">
             <h1>Happy Women's Day</h1>
@@ -177,5 +186,6 @@
             </div>
         </div>
     </div>
+    <div class="footer-text">/ngvkhoa/</div> <!-- Dòng chữ nhỏ ở góc dưới bên phải -->
 </body>
 </html>
