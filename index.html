@@ -9,38 +9,37 @@
         body {
             background: #fadede;
             display: flex;
-            justify-content: center; /* Căn giữa theo chiều ngang */
-            align-items: center; /* Căn giữa theo chiều dọc */
-            height: 100vh; /* Chiều cao 100% viewport */
-            margin: 0; /* Loại bỏ margin mặc định của body */
-            position: relative; /* Cần thiết cho định vị tuyệt đối */
-            color: white; /* Màu chữ mặc định là trắng */
-            font-family: Aharoni, sans-serif; /* Đổi font chữ thành Aharoni */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            color: white;
+            font-family: Aharoni, sans-serif;
         }
-        
+
         .container {
-            width: 800px;
-            height: 400px;
-            display: flex; /* Sử dụng flexbox để căn giữa nội dung con */
-            align-items: center; /* Căn giữa theo chiều dọc trong container */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
         }
-        
+
         h1 {
             font-family: 'Sacramento', cursive;
             color: #FE7696;
             font-size: 64px;
-            text-align: center; /* Căn giữa nội dung h1 */
-            flex: 1; /* Để h1 chiếm không gian có sẵn */
+            margin-top: -60px; /* Giảm khoảng cách phía trên để đẩy chữ lên */
+            margin-bottom: 20px; /* Khoảng cách giữa dòng chữ và bông hoa */
         }
-        
+
         .rose {
-            width: 200px;
+            width: 100px;
             height: 200px;
-            position: relative; /* Thay đổi từ absolute sang relative để căn giữa dễ hơn */
-            animation: yidon 3s infinite; /* Giảm thời gian hoạt ảnh */
-            margin-left: auto; /* Tự động tạo margin trái để căn sang phải */
+            position: relative;
+            animation: yidon 3s infinite;
         }
-        
+
         .petal {
             width: 50px;
             height: 50px;
@@ -52,7 +51,7 @@
             transform-origin: bottom right;
             animation: zhankai2 10s infinite;
         }
-        
+
         .petal:nth-child(2) {
             transform-origin: right bottom;
             transform: rotate(90deg);
@@ -60,7 +59,7 @@
             left: -10px;
             animation: zhankai1 10s infinite;
         }
-        
+
         .petal:nth-child(3) {
             width: 40px;
             height: 40px;
@@ -71,7 +70,7 @@
             transform-origin: bottom right;
             animation: zhankai2 10s infinite;
         }
-        
+
         .petal:nth-child(4) {
             transform: rotate(90deg);
             width: 40px;
@@ -83,7 +82,7 @@
             transform-origin: bottom right;
             animation: zhankai1 10s infinite;
         }
-        
+
         .petal:nth-child(5) {
             width: 50px;
             height: 50px;
@@ -93,13 +92,13 @@
             z-index: 0;
             background: #d1123f;
         }
-        
+
         .leaf {
             position: absolute;
             top: 120px;
             left: -115px;
         }
-        
+
         .stem {
             width: 240px;
             height: 40px;
@@ -109,7 +108,7 @@
             border-radius: 50% 50%;
             transform: rotate(100deg);
         }
-        
+
         .leafs {
             width: 50px;
             height: 40px;
@@ -120,7 +119,7 @@
             left: 100px;
             z-index: 49;
         }
-        
+
         .leafs:nth-child(2) {
             width: 40px;
             height: 20px;
@@ -128,16 +127,16 @@
             left: 140px;
             transform: rotate(120deg);
         }
-        
+
         @keyframes yidon {
             0%, 100% {
                 transform: translateY(0);
             }
             50% {
-                transform: translateY(-5px); /* Giảm khoảng cách di chuyển */
+                transform: translateY(-5px);
             }
         }
-        
+
         @keyframes zhankai1 {
             50% {
                 transform: rotate(110deg);
@@ -146,7 +145,7 @@
                 transform: rotate(90deg);
             }
         }
-        
+
         @keyframes zhankai2 {
             50% {
                 transform: rotate(-20deg);
@@ -157,19 +156,17 @@
         }
 
         .footer-text {
-            position: absolute; /* Định vị tuyệt đối */
-            bottom: 50px; /* Cách dưới 20px */
-            right: 50px; /* Cách phải 20px */
-            font-size: 12px; /* Kích thước chữ nhỏ */
-            font-weight: bold; /* Tô đậm chữ */
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            font-size: 12px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body onclick="location.reload();">
     <div class="container">
-        <div class="letter">
-            <h1>Happy Vietnamese Women's Day</h1>
-        </div>
+        <h1>Happy Vietnamese Women's Day</h1>
         <div class="rose">
             <div class="flower">
                 <div class="petal"></div>
@@ -185,6 +182,6 @@
             </div>
         </div>
     </div>
-    <div class="footer-text">/ngvkhoa/</div> <!-- Dòng chữ nhỏ ở góc dưới bên phải -->
+    <div class="footer-text">/ngvkhoa/</div>
 </body>
 </html>
